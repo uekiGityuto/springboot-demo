@@ -46,6 +46,7 @@
                 <version>${project.parent.version}</version>
             </plugin>
         </plugins>
+        <finalName>${project.name}</finalName>
     </build>
 
 </project>
