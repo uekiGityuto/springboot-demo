@@ -5,5 +5,5 @@ RUN ./mvnw package -DskipTests=true
 
 FROM gcr.io/distroless/java17:nonroot
 WORKDIR /app
-COPY --from=build-env /app/target/demo.jar ./demo.jar
+COPY --from=build-env --chown=nonroot:nonroot /app/target/demo.jar ./demo.jar
 ENTRYPOINT ["java", "-jar", "./demo.jar"]
