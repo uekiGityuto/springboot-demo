@@ -18,9 +18,15 @@ public class DemoController {
                 .delayElement(Duration.ofSeconds(10));
     }
 
+    @GetMapping("heavier")
+    public Mono<String> getHeavierMsg() {
+        // Graceful Shutdownの挙動確認のために時間のかかる処理を再現
+        return Mono.just("Heavy processing completed!!")
+                .delayElement(Duration.ofMinutes(2));
+    }
+
     @GetMapping("light")
     public Mono<String> getLightMsg() {
         return Mono.just("light processing completed!!");
     }
-    
 }
