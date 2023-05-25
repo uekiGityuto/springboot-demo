@@ -8,3 +8,5 @@ SpringBoot のバージョンなどは pom.xml を参照して下さい。
 
 K8s のマニフェストは以下リポジトリを参照して下さい。  
 https://github.com/uekiGityuto/k8s-demo
+
+test
